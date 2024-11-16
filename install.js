@@ -19,17 +19,17 @@ module.exports = {
         ]
       }
     },
-    {
-      when: "{{platform === 'darwin'}}",
-      method: "shell.run",
-      params: {
-        path: "app",
-        message: [
-          "git fetch --all",
-          "git checkout use_mps_on_apple_silicon"
-        ]
-      }
-    },
+//    {
+//      when: "{{platform === 'darwin'}}",
+//      method: "shell.run",
+//      params: {
+//        path: "app",
+//        message: [
+//          "git fetch --all",
+//          "git checkout use_mps_on_apple_silicon"
+//        ]
+//      }
+//    },
 //    {
 //      method: "shell.run",
 //      params: {
