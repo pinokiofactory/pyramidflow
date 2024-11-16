@@ -2,10 +2,11 @@ module.exports = {
   run: [
     // Edit this step to customize the git repository to use
     {
+      when: "{{platform !== 'darwin'}}",
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/jy0205/Pyramid-Flow app",
+          "git clone https://github.com/peanutcocktail/Pyramid-Flow app",
         ]
       }
     },
@@ -13,13 +14,30 @@ module.exports = {
       when: "{{platform === 'darwin'}}",
       method: "shell.run",
       params: {
-        path: "app",
         message: [
-          "git fetch origin pull/113/head:use_mps_on_apple_silicon",
-          "git switch use_mps_on_apple_silicon"
+          "git clone https://github.com/betapeanut/Pyramid-Flow app",
         ]
       }
     },
+//    {
+//      method: "shell.run",
+//      params: {
+//        message: [
+//          "git clone https://github.com/jy0205/Pyramid-Flow app",
+//        ]
+//      }
+//    },
+//    {
+//      when: "{{platform === 'darwin'}}",
+//      method: "shell.run",
+//      params: {
+//        path: "app",
+//        message: [
+//          "git fetch origin pull/113/head:use_mps_on_apple_silicon",
+//          "git switch use_mps_on_apple_silicon"
+//        ]
+//      }
+//    },
     // Edit this step with your custom install commands
     {
       method: "shell.run",
