@@ -16,6 +16,7 @@ module.exports = {
       params: {
         message: [
           "git clone https://github.com/betapeanut/Pyramid-Flow app",
+          "git checkout use_mps_on_apple_silicon"
         ]
       }
     },
