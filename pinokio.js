@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "2.0",
   title: "pyramidflow",
-  description: "",
+  description: "Pyramd Flow Video Generation AI (text-to-video & image-to-video) https://github.com/jy0205/Pyramid-Flow",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")

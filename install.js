@@ -9,8 +9,20 @@ module.exports = {
         ]
       }
     },
+    {
+      when: "{{platform === 'darwin'}}",
+      method: "shell.run",
+      params: {
+        path: "app",
+        message: [
+          "git fetch origin pull/113/head:use_mps_on_apple_silicon",
+          "git switch use_mps_on_apple_silicon"
+        ]
+      }
+    },
     // Delete this step if your project does not use torch
     {
+      when: "{{platform !== 'darwin'}}",
       method: "script.start",
       params: {
         uri: "torch.js",
