@@ -16,6 +16,15 @@ module.exports = {
       params: {
         message: [
           "git clone https://github.com/betapeanut/Pyramid-Flow app",
+        ]
+      }
+    },
+    {
+      when: "{{platform === 'darwin'}}",
+      method: "shell.run",
+      params: {
+        path: "app",
+        message: [
           "git fetch --all",
           "git checkout use_mps_on_apple_silicon"
         ]
